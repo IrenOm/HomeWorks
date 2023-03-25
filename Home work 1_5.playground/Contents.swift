@@ -10,7 +10,7 @@ import UIKit
 var nr1: Float = 3.14
 var nr2: Float = 42.0
 var nr3: Double = Double(nr1 + nr2)
-print(nr3)
+print(String(format: "%.2f", nr3))
 
 /*
  Ex2:
@@ -39,6 +39,17 @@ print("When dividing \(numberOne) by \(numberTwo), the result is \(newConstantOn
  print("new: \(qty) MacBook Pro with the price of: \(price) EUR, will cost you: \(totalSum) Eur")
  */
 
+var price = 1000
+var Qty = 3
+var totalSum: Int = (Qty * price)
+
+if Qty >= 5 && Qty < 9 {
+    print("You will have a discount! Pay 900Eur for each!")
+} else if Qty >= 10 {
+    print("You will have a discount! Pay 850Eur for each!")
+}
+
+print("new: \(Qty) MacBook Pro with the price of: \(price) EUR, will cost you: \(totalSum) Eur")
 
 /*
  Ex4:
@@ -46,12 +57,16 @@ print("When dividing \(numberOne) by \(numberTwo), the result is \(newConstantOn
  Fix this Fatal error inside the if-else statements to print whenever this age can be converted to Int or not!
  */
 
+let userInputAge = "33a"
+
+
 
 /*
  Ex5:
  Calculate the number of years, months, days have passed from you birthday to current date.
  print("Total years: \(totalYearsFromBirth) , total months: \(totalMonthFromBirth), total days: \(totalDaysFromBirth) have passed")
  */
+
 
 /*
  Ex6:
