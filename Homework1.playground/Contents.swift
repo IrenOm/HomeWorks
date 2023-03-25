@@ -61,7 +61,10 @@ Conditions: triangle length: AC = 8.0, CB = 6.0. The hypotenuse of triangle AB i
  4.Triangle perimeter
 */
 
-
+var AC: Double = 8
+var CB: Double = 6
+var triangleOfHypotenuse = Double
+// I will finish later
 
 /*
  Ex5:
@@ -78,8 +81,17 @@ let MyBirthDateString = "01.01.1988"
 let myBirthDay = formatter.date(from: MyBirthDateString) ?? Date()
 
 var totalYearsFromBirth = calendar.dateComponents([.year], from: myBirthDay, to: currentDate).year
-var totalYearsFromBirth = calendar.dateComponents([.year], from: myBirthDay, to: currentDate).year
-var totalYearsFromBirth = calendar.dateComponents([.year], from: myBirthDay, to: currentDate).year
+var totalMonthFromBirth = calendar.dateComponents([.month], from: myBirthDay, to: currentDate).month
+var totalDayFromBirth = calendar.dateComponents([.day], from: myBirthDay, to: currentDate).day
+
+if totalYearsFromBirth == 0 || totalMonthFromBirth == 0 || totalDayFromBirth == 0 {
+    print("unable to convert")
+} else {
+    print("Total years: \(totalYearsFromBirth!), total month: \(totalMonthFromBirth!), total days: \(totalDayFromBirth!)")
+}
+
+
+
 
 
 
