@@ -57,15 +57,30 @@ print("new: \(Qty) MacBook Pro with the price of: \(price) EUR, will cost you: \
  Fix this Fatal error inside the if-else statements to print whenever this age can be converted to Int or not!
  */
 
-let userInputAge = "33a"
+var userInputAge: String?
+userInputAge = "33a"
+var convertIntoInt = Int(userInputAge ?? "0")
+print(convertIntoInt)
 
+if convertIntoInt == nil {
+    print("converted \(convertIntoInt)")
+} else {
+    print("Cannot be converted")
+}
 
+if let ActualuserInputAge = Int(userInputAge ?? "0") {
+    print("convertIntoInt \(ActualuserInputAge)")
+} else {
+    print("\(String(describing: userInputAge)) cant be converted to an Int")
+}
 
 /*
  Ex5:
  Calculate the number of years, months, days have passed from you birthday to current date.
  print("Total years: \(totalYearsFromBirth) , total months: \(totalMonthFromBirth), total days: \(totalDaysFromBirth) have passed")
  */
+
+let date = Data()
 
 
 /*
