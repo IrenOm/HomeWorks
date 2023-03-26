@@ -80,11 +80,38 @@ if let ActualuserInputAge = Int(userInputAge ?? "0") {
  print("Total years: \(totalYearsFromBirth) , total months: \(totalMonthFromBirth), total days: \(totalDaysFromBirth) have passed")
  */
 
-let date = Data()
+let formatter = DateFormatter()
+formatter.dateFormat = "dd.MM.yyyy"
 
+let calendar = Calendar.current
+
+let currentDate = Date()
+let myBirthDateString = "01.01.2010"
+
+let myBirthDate = formatter.date(from: myBirthDateString) ?? Date()
+
+var totalYearsFromBirth = calendar.dateComponents([.year], from: myBirthDate, to: currentDate).year
+var totalMonthFromBirth = calendar.dateComponents([.month], from: myBirthDate, to: currentDate).month
+var totalDayFromBirth = calendar.dateComponents([.day], from: myBirthDate, to: currentDate).day
+
+if totalYearsFromBirth == 0 || totalMonthFromBirth == 0 || totalDayFromBirth == 0 {
+    print("unable to convert")
+} else {
+        print("Total years: \(totalYearsFromBirth!), total month: \(totalMonthFromBirth!), total days: \(totalDayFromBirth!)")
+}
 
 /*
  Ex6:
  Use Exercise 5 monthOfBirth to calculate in which quarter of the year you were born.
  Use switch case to print("I was born in the ... quarter")
  */
+
+var quater = calendar.Component(.month, from: myBirthDateString)
+
+switch quater {
+    
+}
+
+
+
+
